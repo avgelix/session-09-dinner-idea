@@ -15,6 +15,10 @@ Design notes
 - Palette: black/white with a single strong red accent.
 - Layout uses CSS Grid and generous whitespace to echo Vignelli's clarity.
 
+Poster-style update
+- The site now includes a colorful hero inspired by Massimo Vignelli posters: stacked color blocks with a bold typographic overlay.
+- Palette expanded to a small, deliberate set: deep navy, vivid red, warm yellow, and teal — used as geometric swatches for strong visual hierarchy.
+
 Next steps (optional)
 - Add real images and svg marks with strict spacing.
 - Replace system fonts with licensed Helvetica or a close alternative.
