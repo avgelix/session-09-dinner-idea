@@ -19,6 +19,10 @@ Poster-style update
 - The site now includes a colorful hero inspired by Massimo Vignelli posters: stacked color blocks with a bold typographic overlay.
 - Palette expanded to a small, deliberate set: deep navy, vivid red, warm yellow, and teal — used as geometric swatches for strong visual hierarchy.
 
+Logo & spacing
+- Added a small geometric logo in `assets/logo.svg` (stacked rectangles + wordmark) to echo Vignelli's mark systems. If you'd like a PNG raster, I can generate and add one.
+- Implemented a strict spacing system in `styles.css` using a base unit (`--unit: 8px`) and named multiples (`--space-sm`, `--space-md`, etc.). This ensures consistent rhythm and easier adherence to a grid.
+
 Next steps (optional)
 - Add real images and svg marks with strict spacing.
 - Replace system fonts with licensed Helvetica or a close alternative.
