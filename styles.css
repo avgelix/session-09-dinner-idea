@@ -91,7 +91,7 @@ body{
 /* stronger section titles with color */
 .section-title{color:var(--c4)}
 
-.about,.contact{padding:calc(var(--space-xl) * 0.25) 0}
+.about,.contact{padding:calc(var(--space-xl) * 0.25) var(--space-lg)}
 
 /* Footer */
 .site-footer{border-top:1px solid #efefef;padding:1.5rem 0}
