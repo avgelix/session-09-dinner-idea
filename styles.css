@@ -1,13 +1,13 @@
 /* Vignelli-inspired palette and typography */
 :root{
-  --bg: #ffffff;
-  --text: #000000;
-  --muted: #4a4a4a;
-  --accent: #c8102e; /* strong red */
-  --c1: #c8102e; /* vivid red */
-  --c2: #f6b042; /* warm yellow */
-  --c3: #007a7c; /* teal */
-  --c4: #14213d; /* deep navy */
+  /* Italian flag palette + black/white only */
+  --bg: #ffffff; /* white */
+  --black: #000000; /* black */
+  --green: #009246; /* Italian flag green */
+  --red: #CE2B37; /* Italian flag red */
+  --white: #ffffff;
+  /* muted as black with opacity (still 'black' family) */
+  --muted: rgba(0,0,0,0.65);
   /* strict spacing system: base unit and multiples to follow Vignelli's grid rhythm */
   --unit: 8px;
   --space-xs: calc(var(--unit) * 0.5);
@@ -24,7 +24,7 @@ html,body{height:100%}
 body{
   margin:0;
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color:var(--text);
+  color:var(--black);
   background:var(--bg);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
@@ -55,23 +55,23 @@ body{
 .hero-grid{display:grid;grid-template-columns:1fr 260px;gap:var(--col-gap);align-items:center}
 .hero-left h2{font-size:2.25rem;margin:0;letter-spacing:4px;text-transform:uppercase}
 .lead{margin-top:var(--space-sm);color:var(--muted);font-size:1rem}
-.big{font-size:3rem;font-weight:900;text-align:right;letter-spacing:6px;margin:0;color:var(--bg);position:relative;z-index:2}
+.big{font-size:3rem;font-weight:900;text-align:right;letter-spacing:6px;margin:0;color:var(--white);position:relative;z-index:2}
 
 /* Poster swatches */
 .hero-right{position:relative;display:flex;align-items:center;justify-content:center}
-.poster{display:flex;flex-direction:column;width:220px;height:300px;border:4px solid var(--c4)}
+.poster{display:flex;flex-direction:column;width:220px;height:300px;border:4px solid var(--black)}
 .swatch{flex:1}
-.swatch-1{background:var(--c4)}
-.swatch-2{background:var(--c1)}
-.swatch-3{background:var(--c2)}
-.swatch-4{background:var(--c3)}
+.swatch-1{background:var(--green)}
+.swatch-2{background:var(--white)}
+.swatch-3{background:var(--red)}
+.swatch-4{background:var(--black)}
 
 /* Make the big label overlay the swatches */
 .hero-right .big{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:3.25rem;line-height:1;color:var(--bg);text-shadow:0 6px 0 rgba(0,0,0,0.05)}
 
 .actions{margin-top:var(--space-md);display:flex;gap:var(--space-sm)}
 .btn{padding:calc(var(--unit) * 1) calc(var(--unit) * 2);border:1px solid var(--text);background:transparent;color:var(--text);text-decoration:none;font-weight:700;letter-spacing:1px}
-.btn-primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.btn-primary{background:var(--red);color:var(--white);border-color:var(--red)}
 .btn-ghost{opacity:.9}
 
 /* Sections */
@@ -79,22 +79,22 @@ body{
 
 .filters{display:flex;gap:var(--space-xs);margin-bottom:var(--space-sm)}
 .filter{border:1px solid var(--text);background:transparent;padding:calc(var(--unit) * 0.5) calc(var(--unit) * 1);font-weight:700;letter-spacing:1px}
-.filter.active{background:var(--text);color:#fff}
+.filter.active{background:var(--black);color:var(--white)}
 
 .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:calc(var(--unit) * 6)}
-.menu-item{padding:var(--space-sm);border:1px solid #efefef}
+.menu-item{padding:var(--space-sm);border:1px solid rgba(0,0,0,0.08)}
 .item-head{display:flex;justify-content:space-between;align-items:center}
 .menu-item h4{margin:0;font-size:1rem;letter-spacing:1px}
 .price{font-weight:700}
 .muted{color:var(--muted)}
 
 /* stronger section titles with color */
-.section-title{color:var(--c4)}
+.section-title{color:var(--black)}
 
 .about,.contact{padding:calc(var(--space-xl) * 0.25) var(--space-lg)}
 
 /* Footer */
-.site-footer{border-top:1px solid #efefef;padding:1.5rem 0}
+.site-footer{border-top:1px solid rgba(0,0,0,0.08);padding:1.5rem 0}
 .footer-grid{display:flex;justify-content:space-between;align-items:center}
 
 /* Header safety: prevent hero/poster from overlapping nav/logo */

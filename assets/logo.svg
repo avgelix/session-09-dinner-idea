@@ -3,10 +3,10 @@
   <rect width="240" height="80" fill="#ffffff"/>
   <!-- Vignelli-inspired mark: stacked rectangles and type -->
   <g transform="translate(12,10)">
-    <rect x="0" y="0" width="36" height="60" fill="#14213d"/>
-    <rect x="44" y="0" width="36" height="36" fill="#c8102e"/>
-    <rect x="44" y="40" width="36" height="20" fill="#f6b042"/>
-    <rect x="88" y="0" width="36" height="60" fill="#007a7c"/>
-    <text x="136" y="42" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#000" letter-spacing="4">IL RISTORANTE</text>
+    <rect x="0" y="0" width="36" height="60" fill="#009246"/>
+    <rect x="44" y="0" width="36" height="36" fill="#ffffff"/>
+    <rect x="44" y="40" width="36" height="20" fill="#CE2B37"/>
+    <rect x="88" y="0" width="36" height="60" fill="#000000"/>
+    <text x="136" y="42" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#000000" letter-spacing="4">IL RISTORANTE</text>
   </g>
 </svg>
