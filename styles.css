@@ -35,7 +35,7 @@ body{
 /* Use spacing scale throughout */
 .brand{display:flex;align-items:center;gap:var(--space-sm)}
 .brand-link{display:inline-block}
-.logo{display:block;height:var(--space-xl);width:auto}
+.logo{display:block;height:var(--space-lg);width:auto;max-width:220px}
 .tag{margin:0;font-size:.75rem;color:var(--muted);letter-spacing:2px}
 
 /* Header */
@@ -96,6 +96,16 @@ body{
 /* Footer */
 .site-footer{border-top:1px solid #efefef;padding:1.5rem 0}
 .footer-grid{display:flex;justify-content:space-between;align-items:center}
+
+/* Header safety: prevent hero/poster from overlapping nav/logo */
+.site-header{position:relative;z-index:20;background:var(--bg);border-bottom:1px solid #efefef;padding-top:var(--space-xs);padding-bottom:var(--space-xs)}
+.header-grid{display:flex;align-items:center;justify-content:space-between;gap:var(--space-md)}
+.nav-list{white-space:nowrap}
+
+/* Add generous negative space (vertical breathing) between main sections */
+main > section{padding-top:var(--space-lg);padding-bottom:var(--space-lg)}
+/* Reduce extra top spacing for hero to keep it visually dominant */
+.hero{padding-top:calc(var(--space-lg) * 0.75);padding-bottom:calc(var(--space-lg) * 0.75)}
 
 /* Responsive */
 @media (max-width:900px){
