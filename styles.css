@@ -1,0 +1,83 @@
+/* Vignelli-inspired palette and typography */
+:root{
+  --bg: #ffffff;
+  --text: #000000;
+  --muted: #4a4a4a;
+  --accent: #c8102e; /* strong red */
+  --max-width: 1100px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.container{max-width:var(--max-width);margin:0 auto;padding:2rem}
+
+/* Header */
+.header-grid{display:flex;align-items:center;justify-content:space-between}
+.brand h1{
+  margin:0;font-size:1.125rem;letter-spacing:3px;font-weight:700;text-transform:uppercase
+}
+.brand .tag{margin:0;font-size:.75rem;color:var(--muted);letter-spacing:2px}
+
+.nav{position:relative}
+.nav-list{list-style:none;margin:0;padding:0;display:flex;gap:1.25rem}
+.nav-list a{color:var(--text);text-decoration:none;font-weight:600;letter-spacing:2px;font-size:.85rem}
+.nav-toggle{display:none;background:transparent;border:0;font-size:1.25rem}
+
+/* Hero */
+.hero{padding:4rem 0}
+.hero-grid{display:grid;grid-template-columns:1fr 260px;gap:2rem;align-items:center}
+.hero-left h2{font-size:2.25rem;margin:0;letter-spacing:4px;text-transform:uppercase}
+.lead{margin-top:1rem;color:var(--muted);font-size:1rem}
+.big{font-size:2.5rem;font-weight:700;text-align:right;letter-spacing:6px;margin:0;color:var(--muted)}
+
+.actions{margin-top:1.25rem;display:flex;gap:1rem}
+.btn{padding:.65rem 1rem;border:1px solid var(--text);background:transparent;color:var(--text);text-decoration:none;font-weight:700;letter-spacing:1px}
+.btn-primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.btn-ghost{opacity:.9}
+
+/* Sections */
+.section-title{margin:0 0 1rem 0;font-weight:700;letter-spacing:4px;text-transform:uppercase}
+
+.filters{display:flex;gap:.5rem;margin-bottom:1rem}
+.filter{border:1px solid var(--text);background:transparent;padding:.5rem .75rem;font-weight:700;letter-spacing:1px}
+.filter.active{background:var(--text);color:#fff}
+
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.menu-item{padding:1rem;border:1px solid #efefef}
+.item-head{display:flex;justify-content:space-between;align-items:center}
+.menu-item h4{margin:0;font-size:1rem;letter-spacing:1px}
+.price{font-weight:700}
+.muted{color:var(--muted)}
+
+.about,.contact{padding:2rem 0}
+
+/* Footer */
+.site-footer{border-top:1px solid #efefef;padding:1.5rem 0}
+.footer-grid{display:flex;justify-content:space-between;align-items:center}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;}
+  .menu-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media (max-width:600px){
+  .nav-list{display:none;flex-direction:column;gap:0}
+  .nav-toggle{display:inline-block}
+  .nav-list.show{display:flex}
+  .menu-grid{grid-template-columns:1fr}
+  .container{padding:1rem}
+  .brand h1{font-size:.95rem}
+}
+
+/* Small visual tweaks for strong grid feel */
+.section-title + .filters{margin-top:0}

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Il Ristorante — Italian Dinner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <div class="brand">
+        <h1>IL RISTORANTE</h1>
+        <p class="tag">Italian food — simple &amp; timeless</p>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-toggle" aria-expanded="false">☰</button>
+        <ul class="nav-list">
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#menu">MENU</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <h2>ITALIAN DINNER IDEAS</h2>
+          <p class="lead">A curated selection of classic dishes. Minimal design. Maximum flavour.</p>
+          <div class="actions">
+            <button id="randomBtn" class="btn btn-primary">Random Dinner</button>
+            <a href="#menu" class="btn btn-ghost">View Menu</a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <p class="big">MADE SIMPLE</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="menu container">
+      <h3 class="section-title">MENU</h3>
+      <div class="filters" role="toolbar" aria-label="Menu filters">
+        <button class="filter active" data-filter="all">ALL</button>
+        <button class="filter" data-filter="antipasti">ANTIPASTI</button>
+        <button class="filter" data-filter="pasta">PASTA</button>
+        <button class="filter" data-filter="pizza">PIZZA</button>
+        <button class="filter" data-filter="dolci">DOLCI</button>
+      </div>
+
+      <div id="menuGrid" class="menu-grid">
+        <!-- Items populated inline for simplicity -->
+        <article class="menu-item" data-category="antipasti">
+          <div class="item-head">
+            <h4>Bruschetta</h4>
+            <span class="price">€6</span>
+          </div>
+          <p class="muted">Grilled bread, tomato, garlic, basil.</p>
+        </article>
+
+        <article class="menu-item" data-category="pasta">
+          <div class="item-head">
+            <h4>Spaghetti Carbonara</h4>
+            <span class="price">€14</span>
+          </div>
+          <p class="muted">Guanciale, pecorino, egg yolk.</p>
+        </article>
+
+        <article class="menu-item" data-category="pizza">
+          <div class="item-head">
+            <h4>Margherita</h4>
+            <span class="price">€11</span>
+          </div>
+          <p class="muted">San Marzano tomato, buffalo mozzarella, basil.</p>
+        </article>
+
+        <article class="menu-item" data-category="pasta">
+          <div class="item-head">
+            <h4>Tagliatelle al Ragu</h4>
+            <span class="price">€15</span>
+          </div>
+          <p class="muted">Slow-cooked beef ragù, parmigiano.</p>
+        </article>
+
+        <article class="menu-item" data-category="antipasti">
+          <div class="item-head">
+            <h4>Insalata Caprese</h4>
+            <span class="price">€9</span>
+          </div>
+          <p class="muted">Tomato, mozzarella, extra virgin olive oil.</p>
+        </article>
+
+        <article class="menu-item" data-category="dolci">
+          <div class="item-head">
+            <h4>Tiramisù</h4>
+            <span class="price">€7</span>
+          </div>
+          <p class="muted">Coffee-soaked ladyfingers, mascarpone cream.</p>
+        </article>
+
+        <article class="menu-item" data-category="pizza">
+          <div class="item-head">
+            <h4>Quattro Formaggi</h4>
+            <span class="price">€13</span>
+          </div>
+          <p class="muted">Blend of four Italian cheeses.</p>
+        </article>
+
+        <article class="menu-item" data-category="dolci">
+          <div class="item-head">
+            <h4>Panna Cotta</h4>
+            <span class="price">€6</span>
+          </div>
+          <p class="muted">Vanilla cream, berry coulis.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about container">
+      <h3 class="section-title">ABOUT</h3>
+      <p class="muted">Design inspired by Massimo Vignelli — purity of forms, strong typography, a restrained palette. The menu focuses on classic dishes done well.</p>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h3 class="section-title">CONTACT</h3>
+      <p class="muted">Via Minimal 1 — Milano · +39 02 1234 5678</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>© Il Ristorante</div>
+      <div class="muted">Made with restraint.</div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
